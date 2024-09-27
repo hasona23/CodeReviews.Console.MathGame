@@ -1,10 +1,12 @@
 ﻿namespace MathGame.hasona23;
-public class Program{
+public class Program
+{
     public static void Main(string[] args)
     {
         Menu.Start();
-        while(true){
-            int input  = Menu.GetOptions();
+        while (true)
+        {
+            int input = Menu.GetOptions();
             //since exit is always the last options
             if (input == (int)Options.Exit)
             {
@@ -18,10 +20,13 @@ public class Program{
             }
             Game game = Game.NewGame(input);
             game.Answer();
-            if (game.Ans != game.Solution){
+            if (game.Ans != game.Solution)
+            {
                 Console.WriteLine($"Wrong Answer. Solution is:{game.Solution}");
-                
-            } else{
+
+            }
+            else
+            {
                 Console.WriteLine("Good Job !");
             }
             Console.WriteLine("Press Enter To continue");
