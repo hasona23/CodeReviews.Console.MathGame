@@ -1,9 +1,8 @@
 ﻿namespace MathGame.hasona23;
-
 public class Program{
-    public static void Main(string[] args){
+    public static void Main(string[] args)
+    {
         Menu.Start();
-       
         while(true){
             int input  = Menu.GetOptions();
             //since exit is always the last options
